@@ -49,6 +49,7 @@ public class CKAgendaView: UIView {
         calendar.dataSource = self
         calendar.delegate = self
         calendar.backgroundColor = UIColor.white
+        calendar.locale = Locale(identifier: "zh_CN")
         addSubview(calendar)
         
         tbEvent = UITableView()
