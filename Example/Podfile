@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'CKAgendaView_Example' do
+  pod 'CKAgendaView', :path => '../'
+
+  target 'CKAgendaView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
