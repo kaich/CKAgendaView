@@ -23,6 +23,7 @@
 		0DF3384D0CA495F936BB6BF7831E9E70 /* ConstraintMakerExtendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E25D1F54D306CD1F815F74224E5D0DB /* ConstraintMakerExtendable.swift */; };
 		125DBCB0AEF5235F379D901E6F5DD57B /* CoreDataChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = A322908B7D5A8FA5AD16024531FDAB91 /* CoreDataChange.swift */; };
 		13D1EC057D6D9B3391FF74E67C953380 /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6AAB4AC053216331886E4C06ED4883 /* LayoutConstraintItem.swift */; };
+		1460D6335F487C889FADCEA05336D8C3 /* CKAgenda+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F75DF9254D1F72A76616F7290A05A8 /* CKAgenda+CoreDataClass.swift */; };
 		153837B561189872498A0C634DC4DC6F /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F28E99CD81AFBE55904A0A36ABD3A2 /* UILayoutSupport+Extensions.swift */; };
 		177A3579B3CE284F0E52D2343F6776E6 /* SugarRecord-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A698635ACD3935857B91DC7E89DD7C5 /* SugarRecord-dummy.m */; };
 		1DC2B93CD0AC53236C0F3937E38F9BAA /* Result-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4C002AE52B8500C57224E7CE4DFC69 /* Result-dummy.m */; };
@@ -74,6 +75,7 @@
 		71C1C706D0D979C148BC825788F38BC1 /* FSCalendarCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 31278A9068CEBB9D40009DD7E399488D /* FSCalendarCalculator.m */; };
 		72B19780C6613EE084574793E3D72013 /* ConstraintLayoutGuideDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6658A435D91CA4F1F867DAAD3A693279 /* ConstraintLayoutGuideDSL.swift */; };
 		730E433BBEDECC93A73912A4068BD5CA /* Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = E715F96D200822EFC19359479A174FF7 /* Debugging.swift */; };
+		7436BAA803080FFDC78B2639553090D6 /* CKAgenda+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97AB9CA1F9BB12ED6EC958EED1C984F /* CKAgenda+CoreDataProperties.swift */; };
 		750E2C165E982DFE77D0257BD5B53FCA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E332C19C95243FE56CB989B4A9772B91 /* QuartzCore.framework */; };
 		75B3CF2C1DB9941CE747CAD3CEADB6FF /* FSCalendarExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = C2181172197C2BC4E41B47E176DDF8E0 /* FSCalendarExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		784428F9B923ADEA369E22928B0B2665 /* ConstraintViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8551F1947DDC02E30955D13F2F547630 /* ConstraintViewDSL.swift */; };
@@ -203,24 +205,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00F87CBFA3497B99F8AD52958F85C745 /* Pods-CKAgendaView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CKAgendaView_Tests.modulemap"; sourceTree = "<group>"; };
+		00F87CBFA3497B99F8AD52958F85C745 /* Pods-CKAgendaView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CKAgendaView_Tests.modulemap"; sourceTree = "<group>"; };
 		024B2CF971E79FD19A6680D83B334B6B /* VersionProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VersionProvider.swift; path = SugarRecord/Source/Foundation/Version/VersionProvider.swift; sourceTree = "<group>"; };
 		0387967E79134897B03379C23F740893 /* Result-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Result-prefix.pch"; sourceTree = "<group>"; };
 		0808290FFB8FA6C219F7FC2FA0ADF772 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		085794020A19A0ED4FBACA932D16313B /* FSCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FSCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		085794020A19A0ED4FBACA932D16313B /* FSCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FSCalendar.framework; path = FSCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A5886C41CD949618ACB5581BE5B8782 /* FSCalendarCollectionViewLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarCollectionViewLayout.h; path = FSCalendar/FSCalendarCollectionViewLayout.h; sourceTree = "<group>"; };
 		0B8D84945F824BCF23E668DFF295CA5C /* SugarRecord-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SugarRecord-prefix.pch"; sourceTree = "<group>"; };
 		0F169875D45B6DEECD622C3C6FA81B4D /* Requestable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Requestable.swift; path = SugarRecord/Source/Foundation/Protocols/Requestable.swift; sourceTree = "<group>"; };
 		117EC4A239A3B704ABF681F0493255C4 /* FSCalendarCollectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarCollectionView.h; path = FSCalendar/FSCalendarCollectionView.h; sourceTree = "<group>"; };
 		15CDF312EFB3C3D9F44DA2FDE4549280 /* ConstraintConstantTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConstantTarget.swift; path = Source/ConstraintConstantTarget.swift; sourceTree = "<group>"; };
 		16AEA714DACC05DC739A45E874172C5A /* SugarRecord.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SugarRecord.xcconfig; sourceTree = "<group>"; };
-		1A03390BBC76A822D57FAF18083035E8 /* FSCalendar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FSCalendar.modulemap; sourceTree = "<group>"; };
-		1A3D76E824364D28DDF9AE541D00FD79 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A03390BBC76A822D57FAF18083035E8 /* FSCalendar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = FSCalendar.modulemap; sourceTree = "<group>"; };
+		1A3D76E824364D28DDF9AE541D00FD79 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SnapKit.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BCF86A11747D47FBAFF391A0DC35E0B /* ConstraintAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintAttributes.swift; path = Source/ConstraintAttributes.swift; sourceTree = "<group>"; };
 		1DA34CE4432FA134354C860E6817457A /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EC2FC836DB69EDE37C4650D4D80DF20 /* CKAgendaView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CKAgendaView-umbrella.h"; sourceTree = "<group>"; };
 		1FCA8C65DC85FD2035C21782EBE81517 /* FSCalendarExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarExtensions.m; path = FSCalendar/FSCalendarExtensions.m; sourceTree = "<group>"; };
-		22F4D79FB9B32B0EA541FA3A374B29BD /* Result.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Result.modulemap; sourceTree = "<group>"; };
+		22F4D79FB9B32B0EA541FA3A374B29BD /* Result.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Result.modulemap; sourceTree = "<group>"; };
 		25CEC259B558C633F6EAA6C928A8209B /* FSCalendarWeekdayView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarWeekdayView.m; path = FSCalendar/FSCalendarWeekdayView.m; sourceTree = "<group>"; };
 		261569D0FDAB1636D5BD339879776EC7 /* FSCalendarWeekdayView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarWeekdayView.h; path = FSCalendar/FSCalendarWeekdayView.h; sourceTree = "<group>"; };
 		278E0197930B472EF31B44F0FFEEC71C /* CoreDataObservable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoreDataObservable.swift; path = SugarRecord/Source/CoreData/Entities/CoreDataObservable.swift; sourceTree = "<group>"; };
@@ -264,7 +266,7 @@
 		5B8B6C8BC2A666A151A093DA4B7A4490 /* DirUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DirUtils.swift; path = SugarRecord/Source/Foundation/Utils/DirUtils.swift; sourceTree = "<group>"; };
 		5BE423CB207A87888FDF9FD63CFC8747 /* Pods-CKAgendaView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CKAgendaView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		5E42C960ECCF12FB79EAEAE42CFD2FB1 /* Pods-CKAgendaView_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CKAgendaView_Tests-resources.sh"; sourceTree = "<group>"; };
-		5F9351B9F95A70F1D9DF00D32CC9D2F8 /* SugarRecord.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SugarRecord.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F9351B9F95A70F1D9DF00D32CC9D2F8 /* SugarRecord.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SugarRecord.framework; path = SugarRecord.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6059B3603BD1822A2A6D37033B891FFC /* FSCalendarStickyHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarStickyHeader.h; path = FSCalendar/FSCalendarStickyHeader.h; sourceTree = "<group>"; };
 		6198F317C63210C51C502D3151E1EA77 /* NSManagedObject.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSManagedObject.swift; path = SugarRecord/Source/CoreData/Extensions/NSManagedObject.swift; sourceTree = "<group>"; };
 		61AF3F6ED7B912D67E20A3ED3EADE8F7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -277,7 +279,7 @@
 		69FA68FADA6DD73D7D152B3DC91BFF17 /* Pods-CKAgendaView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CKAgendaView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6C716631116E405FA535998CE46FD332 /* CoreDataStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoreDataStore.swift; path = SugarRecord/Source/CoreData/Entities/CoreDataStore.swift; sourceTree = "<group>"; };
 		6E25D1F54D306CD1F815F74224E5D0DB /* ConstraintMakerExtendable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerExtendable.swift; path = Source/ConstraintMakerExtendable.swift; sourceTree = "<group>"; };
-		71E91C112B323BB05694FF892CB1F141 /* CKAgendaView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CKAgendaView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		71E91C112B323BB05694FF892CB1F141 /* CKAgendaView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CKAgendaView.framework; path = CKAgendaView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75D5D1C2A1764F198460AEF3003C384E /* SnapKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SnapKit-dummy.m"; sourceTree = "<group>"; };
 		79070C1F0DA24ED6FB5D2BE77B5C3DDB /* FSCalendar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FSCalendar-dummy.m"; sourceTree = "<group>"; };
 		79F533634CBE91CF97AFFA1F403E397B /* CoreDataContextParent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoreDataContextParent.swift; path = SugarRecord/Source/CoreData/Entities/CoreDataContextParent.swift; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 		80C6EF3B87D3FBB6D0FB4BFF1C292C5C /* Context.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Context.swift; path = SugarRecord/Source/Foundation/Protocols/Context.swift; sourceTree = "<group>"; };
 		820EE79F945F4F6294F10028F62104B3 /* Typealiases.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Typealiases.swift; path = Source/Typealiases.swift; sourceTree = "<group>"; };
 		82D46FAEDB9474291E502B2963B6C3EE /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerRelatable.swift; path = Source/ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
+		82F75DF9254D1F72A76616F7290A05A8 /* CKAgenda+CoreDataClass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CKAgenda+CoreDataClass.swift"; path = "CKAgendaView/Classes/CKAgenda+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8380CD6B56B24AEDFCAB2310F2C164C3 /* CKAgendaTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CKAgendaTableViewCell.swift; path = CKAgendaView/Classes/CKAgendaTableViewCell.swift; sourceTree = "<group>"; };
 		84A851BE7C09F4B09B29BE3DA05AE90E /* ConstraintDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDSL.swift; path = Source/ConstraintDSL.swift; sourceTree = "<group>"; };
 		8548D0AD7FE9C2B82240857390DB1FE6 /* FSCalendarDynamicHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarDynamicHeader.h; path = FSCalendar/FSCalendarDynamicHeader.h; sourceTree = "<group>"; };
@@ -299,10 +302,10 @@
 		8D6AAB4AC053216331886E4C06ED4883 /* LayoutConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraintItem.swift; path = Source/LayoutConstraintItem.swift; sourceTree = "<group>"; };
 		8D7E20B1128F1C5E2AB9D7482B749E05 /* SnapKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapKit.xcconfig; sourceTree = "<group>"; };
 		8E77345F3C4A3475B9AAD17BD2F3F8AC /* CKAgendaView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CKAgendaView-dummy.m"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		93FBEB28A99E62F3F6DA2DFE1877BCA8 /* ConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintItem.swift; path = Source/ConstraintItem.swift; sourceTree = "<group>"; };
 		9614543894CDCEAB923BE221AF6CABA4 /* SnapKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-umbrella.h"; sourceTree = "<group>"; };
-		97374BC385E8BBD0248E321AB316CAEA /* SnapKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SnapKit.modulemap; sourceTree = "<group>"; };
+		97374BC385E8BBD0248E321AB316CAEA /* SnapKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SnapKit.modulemap; sourceTree = "<group>"; };
 		97B8D4902039B53B7B3FD41FFB7C429E /* CoreDataDefaultStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoreDataDefaultStorage.swift; path = SugarRecord/Source/CoreData/Storages/CoreDataDefaultStorage.swift; sourceTree = "<group>"; };
 		98AE79ADE5BCCA2707CC94E96618CF06 /* Pods-CKAgendaView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CKAgendaView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		98F445DC2FB9A59E73035F104FD05B77 /* Pods-CKAgendaView_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CKAgendaView_Example-resources.sh"; sourceTree = "<group>"; };
@@ -317,10 +320,11 @@
 		A322908B7D5A8FA5AD16024531FDAB91 /* CoreDataChange.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoreDataChange.swift; path = SugarRecord/Source/CoreData/Entities/CoreDataChange.swift; sourceTree = "<group>"; };
 		A6274586FFC6458FD01D384B2EE5719A /* ConstraintMakerFinalizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerFinalizable.swift; path = Source/ConstraintMakerFinalizable.swift; sourceTree = "<group>"; };
 		A64AD6B3E69DD7DEC1A8D1EB00A4BA24 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A69717FE645C8DC9C009447B9BC5969C /* Pods-CKAgendaView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CKAgendaView_Example.modulemap"; sourceTree = "<group>"; };
-		A7D48C7F7910EFBB6DF3ABE9C2A020EE /* SugarRecord.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SugarRecord.modulemap; sourceTree = "<group>"; };
+		A69717FE645C8DC9C009447B9BC5969C /* Pods-CKAgendaView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CKAgendaView_Example.modulemap"; sourceTree = "<group>"; };
+		A7D48C7F7910EFBB6DF3ABE9C2A020EE /* SugarRecord.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SugarRecord.modulemap; sourceTree = "<group>"; };
+		A97AB9CA1F9BB12ED6EC958EED1C984F /* CKAgenda+CoreDataProperties.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CKAgenda+CoreDataProperties.swift"; path = "CKAgendaView/Classes/CKAgenda+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B24C9798F8E38E741BC922E328789438 /* Pods-CKAgendaView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CKAgendaView_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		B25875D46541B47C52FE2E9B84E33F27 /* Pods_CKAgendaView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CKAgendaView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B25875D46541B47C52FE2E9B84E33F27 /* Pods_CKAgendaView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CKAgendaView_Tests.framework; path = "Pods-CKAgendaView_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B342E6BBA6874128B973F4FE0841E821 /* FSCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FSCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3A458A76A7A184CEADC1F884A81681A /* SnapKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-prefix.pch"; sourceTree = "<group>"; };
 		B703D63BC3391C8B0691F5192E38C2C1 /* Pods-CKAgendaView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CKAgendaView_Example-frameworks.sh"; sourceTree = "<group>"; };
@@ -332,10 +336,10 @@
 		BF7182E9DD6EA20531DB082969446C58 /* ConstraintRelation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelation.swift; path = Source/ConstraintRelation.swift; sourceTree = "<group>"; };
 		C2181172197C2BC4E41B47E176DDF8E0 /* FSCalendarExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarExtensions.h; path = FSCalendar/FSCalendarExtensions.h; sourceTree = "<group>"; };
 		C79789F2BEE7F715B29AFCC3558036F5 /* NSManagedObjectMemoryContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSManagedObjectMemoryContext.swift; path = SugarRecord/Source/CoreData/Extensions/NSManagedObjectMemoryContext.swift; sourceTree = "<group>"; };
-		C905BFBFB1FC34742CBF6973D0DD07CB /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C905BFBFB1FC34742CBF6973D0DD07CB /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Result.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9FA04C92B41243E58E42251855F990D /* SugarRecord.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SugarRecord.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB6DA7EB91FD7205C332A89AF36A0635 /* Pods-CKAgendaView_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CKAgendaView_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		CC9B269510265C90E285BEC216FA55B8 /* CKAgendaView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = CKAgendaView.modulemap; sourceTree = "<group>"; };
+		CC9B269510265C90E285BEC216FA55B8 /* CKAgendaView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = CKAgendaView.modulemap; sourceTree = "<group>"; };
 		D1D6748ADA1F62469C8196D93669AB1D /* NSPredicateConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSPredicateConvertible.swift; path = SugarRecord/Source/Foundation/Protocols/NSPredicateConvertible.swift; sourceTree = "<group>"; };
 		D2BB9C7052F5C7F19ECFE714ACC305A7 /* ConstraintRelatableTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelatableTarget.swift; path = Source/ConstraintRelatableTarget.swift; sourceTree = "<group>"; };
 		D36E8ED73DCEC7800DA22477CF1DE7E4 /* ConstraintMakerPriortizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerPriortizable.swift; path = Source/ConstraintMakerPriortizable.swift; sourceTree = "<group>"; };
@@ -347,7 +351,7 @@
 		DDE12C03D273DDE66A64B1683B621F7F /* FSCalendarAppearance.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarAppearance.h; path = FSCalendar/FSCalendarAppearance.h; sourceTree = "<group>"; };
 		E0185DC26625893631980D31F73A9006 /* ConstraintPriorityTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriorityTarget.swift; path = Source/ConstraintPriorityTarget.swift; sourceTree = "<group>"; };
 		E112F256B9CAAC09051FBE225EA0DDBA /* FSCalendarHeaderView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarHeaderView.h; path = FSCalendar/FSCalendarHeaderView.h; sourceTree = "<group>"; };
-		E1D42D17333FE78A320EEF8AA9E7E14A /* Pods_CKAgendaView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CKAgendaView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1D42D17333FE78A320EEF8AA9E7E14A /* Pods_CKAgendaView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CKAgendaView_Example.framework; path = "Pods-CKAgendaView_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E332C19C95243FE56CB989B4A9772B91 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		E6F19F88076CA2E20563D4BDF0B7A6EC /* CoreDataError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoreDataError.swift; path = SugarRecord/Source/CoreData/Errors/CoreDataError.swift; sourceTree = "<group>"; };
 		E715F96D200822EFC19359479A174FF7 /* Debugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Debugging.swift; path = Source/Debugging.swift; sourceTree = "<group>"; };
@@ -531,6 +535,7 @@
 				25CEC259B558C633F6EAA6C928A8209B /* FSCalendarWeekdayView.m */,
 				798C7067D6D8A89660F6007008944A08 /* Support Files */,
 			);
+			name = FSCalendar;
 			path = FSCalendar;
 			sourceTree = "<group>";
 		};
@@ -541,12 +546,15 @@
 				94A5ECE94422CF25F6D5D0556AF591CA /* CoreData+iCloud */,
 				23179998B7A54E78F6A67DEB4FA39BB1 /* Support Files */,
 			);
+			name = SugarRecord;
 			path = SugarRecord;
 			sourceTree = "<group>";
 		};
 		4320A65766C0B0631E726BA13A0F6F60 /* CKAgendaView */ = {
 			isa = PBXGroup;
 			children = (
+				82F75DF9254D1F72A76616F7290A05A8 /* CKAgenda+CoreDataClass.swift */,
+				A97AB9CA1F9BB12ED6EC958EED1C984F /* CKAgenda+CoreDataProperties.swift */,
 				F9F57670BB5BD92F3A87FA318A243779 /* CKAgendaManager.swift */,
 				8380CD6B56B24AEDFCAB2310F2C164C3 /* CKAgendaTableViewCell.swift */,
 				5993384468C7A1FF1AE3BA8A595E049E /* CKAgendaView.swift */,
@@ -691,6 +699,7 @@
 				314CD8CCAAB2379FA7DD2CB72D17843A /* ResultProtocol.swift */,
 				E17890924CB972AC716905B4A158B15B /* Support Files */,
 			);
+			name = Result;
 			path = Result;
 			sourceTree = "<group>";
 		};
@@ -733,6 +742,7 @@
 				41F28E99CD81AFBE55904A0A36ABD3A2 /* UILayoutSupport+Extensions.swift */,
 				1BDA5B658DA7A3B0E7DFA575AFC88572 /* Support Files */,
 			);
+			name = SnapKit;
 			path = SnapKit;
 			sourceTree = "<group>";
 		};
@@ -1036,6 +1046,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				41DC38C1F901DFCFE1830D005BBA987D /* Agenda.xcdatamodeld in Sources */,
+				1460D6335F487C889FADCEA05336D8C3 /* CKAgenda+CoreDataClass.swift in Sources */,
+				7436BAA803080FFDC78B2639553090D6 /* CKAgenda+CoreDataProperties.swift in Sources */,
 				0ABB7DC7FDD06DB71C4A716CD93B1636 /* CKAgendaManager.swift in Sources */,
 				613D71DA9E075AF31649727D06495E4D /* CKAgendaTableViewCell.swift in Sources */,
 				B9F224C52407BDDF8E5AE58D81833D08 /* CKAgendaView-dummy.m in Sources */,
@@ -1866,7 +1878,6 @@
 			children = (
 				579E7529330AD2182E766C0AF996979E /* Agenda.xcdatamodel */,
 			);
-			currentVersion = 579E7529330AD2182E766C0AF996979E /* Agenda.xcdatamodel */;
 			name = Agenda.xcdatamodeld;
 			path = CKAgendaView/Assets/Agenda.xcdatamodeld;
 			sourceTree = "<group>";

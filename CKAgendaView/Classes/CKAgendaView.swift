@@ -55,6 +55,7 @@ public class CKAgendaView: UIView {
         tbEvent.allowsSelection = false
         tbEvent.delegate = self
         tbEvent.dataSource = self
+        tbEvent.tableFooterView = UIView()
         addSubview(tbEvent)
         
         addGestureRecognizer(scopeGesture)
