@@ -1,0 +1,33 @@
+PODS:
+  - CKAgendaView (0.1.0):
+    - FSCalendar
+    - SnapKit
+    - SugarRecord
+  - FSCalendar (2.7.9)
+  - Result (3.2.4)
+  - SnapKit (4.0.0)
+  - SugarRecord (3.1.2):
+    - SugarRecord/CoreData (= 3.1.2)
+    - SugarRecord/CoreData+iCloud (= 3.1.2)
+  - SugarRecord/CoreData (3.1.2):
+    - Result (~> 3.0)
+  - SugarRecord/CoreData+iCloud (3.1.2):
+    - Result (~> 3.0)
+
+DEPENDENCIES:
+  - CKAgendaView (from `../`)
+
+EXTERNAL SOURCES:
+  CKAgendaView:
+    :path: ../
+
+SPEC CHECKSUMS:
+  CKAgendaView: 966c11451ead535f7547ed2a24273c352c0755b8
+  FSCalendar: a04b09f16f811bc92e82f3cf852a15225233b9d5
+  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  SugarRecord: be6aa5c18b4a4dec0de4c1f49fc61c85eabb5328
+
+PODFILE CHECKSUM: f04573b4ffd2a9eaf862fdbd596a2629ad902284
+
+COCOAPODS: 1.3.1

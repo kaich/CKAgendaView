@@ -20,11 +20,24 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hMp-V9-d0M" customClass="CKAgendaView" customModule="CKAgendaView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hMp-V9-d0M" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="5Qv-b8-Ms7"/>
+                            <constraint firstAttribute="trailing" secondItem="hMp-V9-d0M" secondAttribute="trailing" id="9DQ-BW-YGz"/>
+                            <constraint firstItem="hMp-V9-d0M" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="btG-Vg-mW9"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="hMp-V9-d0M" secondAttribute="bottom" id="hU7-ZO-WvP"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>

@@ -32,11 +32,11 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'CKAgendaView/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'CKAgendaView' => ['CKAgendaView/Assets/*.png']
-  # }
+  s.resources = 'CKAgendaView/Assets/*.xcdatamodeld'
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'FSCalendar'
+  s.dependency 'SnapKit'
+  s.dependency 'SugarRecord'
 end

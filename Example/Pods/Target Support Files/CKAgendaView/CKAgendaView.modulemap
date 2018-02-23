@@ -1,0 +1,6 @@
+framework module CKAgendaView {
+  umbrella header "CKAgendaView-umbrella.h"
+
+  export *
+  module * { export * }
+}
