@@ -17,7 +17,7 @@ CKAgendaView is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'CKAgendaView'
+pod 'CKAgendaView', :git => 'https://github.com/kaich/CKAgendaView.git'
 ```
 
 ## Author
