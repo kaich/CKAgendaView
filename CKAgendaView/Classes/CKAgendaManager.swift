@@ -80,11 +80,15 @@ public class CKAgendaManager: NSObject {
     }
     
     public func updateData() {
-        if let date = selectedDate {
-            self.entities = try! db.fetch(FetchRequest<CKAgenda>().filtered(with: "dateString", equalTo: dateFormatter.string(from: date)))
+        self.entities = entitiesFor(date: selectedDate)
+    }
+    
+    public func entitiesFor(date: Date?) -> [CKAgenda] {
+        if let date = date {
+            return try! db.fetch(FetchRequest<CKAgenda>().filtered(with: "dateString", equalTo: dateFormatter.string(from: date)))
         }
         else {
-            self.entities = try! db.fetch(FetchRequest<CKAgenda>())
+            return try! db.fetch(FetchRequest<CKAgenda>())
         }
     }
 

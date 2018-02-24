@@ -12,6 +12,7 @@ class CKAgendaTableViewCell: UITableViewCell {
     let ivImage = UIImageView()
     let lblTitle = UILabel()
     let lblMessage = UILabel()
+    let lblTime = UILabel()
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -26,6 +27,10 @@ class CKAgendaTableViewCell: UITableViewCell {
         lblMessage.textColor = #colorLiteral(red: 0.4, green: 0.4, blue: 0.4, alpha: 1)
         lblMessage.font = UIFont.systemFont(ofSize: 13)
         contentView.addSubview(lblMessage)
+        
+        lblTime.textColor = #colorLiteral(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)
+        lblTime.font = UIFont.systemFont(ofSize: 10)
+        contentView.addSubview(lblTime)
 
         ivImage.snp.makeConstraints { (make) in
             make.height.width.equalTo(30)
@@ -35,7 +40,6 @@ class CKAgendaTableViewCell: UITableViewCell {
         
         lblTitle.snp.makeConstraints { (make) in
             make.left.equalTo(ivImage.snp.right).offset(8)
-            make.right.lessThanOrEqualTo(-15)
             make.top.equalTo(10)
         }
         
@@ -45,6 +49,11 @@ class CKAgendaTableViewCell: UITableViewCell {
             make.bottom.equalTo(-10)
         }
         
+        lblTime.snp.makeConstraints { (make) in
+            make.left.equalTo(lblTitle.snp.right).offset(8)
+            make.right.equalTo(-15)
+            make.centerY.equalTo(lblTitle)
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {

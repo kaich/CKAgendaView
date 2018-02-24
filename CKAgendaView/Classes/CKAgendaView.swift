@@ -28,6 +28,12 @@ public class CKAgendaView: UIView {
         return formatter
     }()
     
+    fileprivate lazy var timeFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "mm:ss"
+        return formatter
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
 
@@ -76,7 +82,7 @@ public class CKAgendaView: UIView {
         CKAgendaManager.shared.dataChangedHandler = {
             self.tbEvent.reloadData()
         }
-        CKAgendaManager.shared.selectedDate = calendar.selectedDate
+        CKAgendaManager.shared.selectedDate = Date()
     }
     
 }
@@ -105,6 +111,10 @@ extension CKAgendaView: UIGestureRecognizerDelegate {
 }
 
 extension CKAgendaView: FSCalendarDataSource, FSCalendarDelegate {
+    
+    public func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
+        return CKAgendaManager.shared.entitiesFor(date: date).count > 0 ? 1 : 0
+    }
     
     public func calendar(_ calendar: FSCalendar, boundingRectWillChange bounds: CGRect, animated: Bool) {
         calendar.snp.updateConstraints { (make) in
@@ -144,6 +154,7 @@ extension CKAgendaView: UITableViewDelegate, UITableViewDataSource {
         let agenda = CKAgendaManager.shared.entities[indexPath.row]
         cell.lblTitle.text = agenda.title
         cell.lblMessage.text = agenda.message
+        cell.lblTime.text = timeFormatter.string(from: agenda.date!)
         if let imageName = agenda.imageName {
             cell.ivImage.image = UIImage(named: imageName)
         }
