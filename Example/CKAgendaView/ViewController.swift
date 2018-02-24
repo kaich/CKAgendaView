@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        CKAgendaManager.shared.addAgenda(title: "233", message: "13414", type: "test", imageName: "icon_cards", identifier: "123", for: Date())
+        CKAgendaManager.shared.addAgenda(title: "test", message: "this is a simple test!", type: "test", imageName: "icon_cards", identifier: "123", for: Date())
     }
 
     override func didReceiveMemoryWarning() {

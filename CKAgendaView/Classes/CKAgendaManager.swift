@@ -17,14 +17,27 @@ public class CKAgendaManager: NSObject {
             self.updateData()
         }
     }
+    
+    public var ubiquitousContainerIdentifier: String? = nil
+    
     var dataChangedHandler: (() -> ())?
 
-    lazy var db: CoreDataDefaultStorage = {
-        let store = CoreDataStore.named("agenda")
-        let bundle = Bundle(for: CKAgenda.classForCoder())
-        let model = CoreDataObjectModel.merged([bundle])
-        let defaultStorage = try! CoreDataDefaultStorage(store: store, model: model)
-        return defaultStorage
+    fileprivate lazy var db: Storage = {
+        let dbName = "agenda"
+        if let ubiquitousContainerIdentifier = self.ubiquitousContainerIdentifier {
+            let bundle = Bundle(for: self.classForCoder)
+            let model = CoreDataObjectModel.merged([bundle])
+            let icloudConfig = CoreDataiCloudConfig(ubiquitousContentName: dbName, ubiquitousContentURL: "Path/", ubiquitousContainerIdentifier: ubiquitousContainerIdentifier)
+            let icloudStorage = try! CoreDataiCloudStorage(model: model, iCloud: icloudConfig)
+            return icloudStorage
+        }
+        else {
+            let store = CoreDataStore.named(dbName)
+            let bundle = Bundle(for: CKAgenda.classForCoder())
+            let model = CoreDataObjectModel.merged([bundle])
+            let defaultStorage = try! CoreDataDefaultStorage(store: store, model: model)
+            return defaultStorage
+        }
     }()
     
     fileprivate lazy var dateFormatter: DateFormatter = {
