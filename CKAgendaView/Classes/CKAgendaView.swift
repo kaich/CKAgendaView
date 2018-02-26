@@ -12,6 +12,11 @@ import SnapKit
 public class CKAgendaView: UIView {
     var calendar: FSCalendar!
     var tbEvent: UITableView!
+    
+    public var delegate: AnyObject?
+    public var tableView: UITableView! {
+        return tbEvent
+    }
 
     fileprivate lazy var scopeGesture: UIPanGestureRecognizer = {
         [unowned self] in
@@ -59,7 +64,6 @@ public class CKAgendaView: UIView {
         addSubview(calendar)
         
         tbEvent = UITableView()
-        tbEvent.allowsSelection = false
         tbEvent.delegate = self
         tbEvent.dataSource = self
         tbEvent.tableFooterView = UIView()
@@ -83,6 +87,39 @@ public class CKAgendaView: UIView {
             self.tbEvent.reloadData()
         }
         CKAgendaManager.shared.selectedDate = Date()
+    }
+    
+    func isExist(selector: Selector, in aProtocol: Protocol) -> Bool {
+        let  hasMethod: objc_method_description = protocol_getMethodDescription(aProtocol, selector, false, true);
+        if ( hasMethod.name != nil )
+        {
+            return true
+        }
+        return false
+    }
+    
+    public override func responds(to aSelector: Selector!) -> Bool {
+        if let aSelector = aSelector {
+            print(aSelector.description)
+            if isExist(selector: aSelector, in: UITableViewDelegate.self) || isExist(selector: aSelector, in: UITableViewDataSource.self) {
+                if let delegate = delegate {
+                    if delegate.responds(to: aSelector) {
+                        return true
+                    }
+                }
+            }
+        }
+
+        return super.responds(to: aSelector)
+    }
+    
+    public override func forwardingTarget(for aSelector: Selector!) -> Any? {
+        if let delegate = delegate {
+            if delegate.responds(to: aSelector) && !responds(to: aSelector) {
+                return aSelector
+            }
+        }
+        return super.forwardingTarget(for: aSelector)
     }
     
 }
@@ -161,5 +198,13 @@ extension CKAgendaView: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    //unknown reason, this method don't forwarding
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let delegate = delegate {
+            if delegate.responds(to: #selector(tableView(_:didSelectRowAt:))) {
+                delegate.tableView(tableView, didSelectRowAt: indexPath)
+            }
+        }
+    }
     
 }

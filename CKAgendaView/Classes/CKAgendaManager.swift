@@ -46,7 +46,7 @@ public class CKAgendaManager: NSObject {
         return formatter
     }()
     
-    var entities: [CKAgenda] = [] {
+    public var entities: [CKAgenda] = [] {
         didSet {
             if let dataChangedHandler = dataChangedHandler {
                 dataChangedHandler()
